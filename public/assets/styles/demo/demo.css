@@ -1,0 +1,11 @@
+.error--seriously, .error {
+  cursor: progress;
+  color: red;
+  background-color: darkred;
+}
+
+.error--seriously {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=demo.css.map */

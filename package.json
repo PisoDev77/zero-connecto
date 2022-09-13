@@ -4,7 +4,7 @@
 
     "dev": "run-p serve watch",
     "serve": "live-server public --host=localhost --port=3000 --no-browser",
-    "compile": "sass sass:public/assets/styles",
+    "compile": "sass sass:public/assets/styles --no-charset",
     "watch": "npm run compile -- --watch --update",
     "optimize": "npm run compile -- --style compressed --no-source-map",
     "build": "run-s clear optimize",

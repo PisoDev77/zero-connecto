@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+%error-base{
+    cursor: progress;
+    color: red;
+    background-color: darkred;
+}
+.error{
+    @extend %error-base;
+    &--seriously{
+        @extend %error-base;
+        font-weight: bold;
+    }
+}
+ 
+
+@mixin fluidWidth($divideRatio: 2){
+    width: math.div($divide, total)
+}
