@@ -1,0 +1,44 @@
+.home {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    height: 48px;
+    vertical-align: middle;
+  }
+
+  .content {
+    flex: 1;
+  }
+  
+  .content p {
+    margin-top: 4px;
+  }
+
+  .features {
+    display: flex;
+    flex-flow: column;
+    margin-top: 40px;
+    font-size: 0.875rem;
+    gap: var(--gap);
+  }
+  
+  .features strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    color: var(--primary);
+  }
+  .features a {
+    text-decoration: none;
+    color: var(--primary);
+  }
+  .copyright {
+    color: var(--secondary);
+  }

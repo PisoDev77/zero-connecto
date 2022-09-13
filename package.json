@@ -1,6 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "serve": "npx live-server public --host=localhost --port=3000 --no-browser"
+    "dev": "run-p clear serve watch",
+    "serve": "live-server public --host=localhost --port=3000 --no-browser",
+    "compile": "sass sass:public/assets/styles",
+    "watch": "npm run compile -- --update --watch",
+    "clear": "rimraf -rf public/assets/styles"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
   }
 }
