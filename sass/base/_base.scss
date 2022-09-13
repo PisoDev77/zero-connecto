@@ -1,6 +1,8 @@
+@use "../config/variables"; //module file -> namespace.module
+
 body {
   margin: 0;
   font: 1rem/1.5 'Spoqa Han Sans Neo', sans-serif;
-  background: $background;
-  color: $secondary;
+  background: variables.$background;
+  color: variables.$secondary;
 }

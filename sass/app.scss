@@ -1,16 +1,4 @@
-
-@import 'config/variables';
-@import 'config/dark';
-
-@import 'base/reset';
-@import 'base/base';
-
-@import 'layout/header';
-@import 'layout/footer';
-
-@import 'components/container';
-@import 'components/logo';
-@import 'components/headline';
-@import 'components/content';
-@import 'components/features';
-@import 'components/button';
+@use "base";
+@use "components";
+@use "config";
+@use "layout";

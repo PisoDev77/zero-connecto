@@ -1,1 +1,9 @@
-.home{display:flex;flex-flow:column;justify-content:flex-start;align-items:flex-start;min-height:100vh}
+.home {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=home.css.map */

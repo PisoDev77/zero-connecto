@@ -1,3 +1,5 @@
+@use "../config/variables" as *;
+
 .features {
   display: flex;
   flex-flow: column;

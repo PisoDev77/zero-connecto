@@ -1,20 +1,31 @@
+@use "../config/variables" as * ;
+
 .toggleDarkMode {
   cursor: pointer;
   border: 0;
   padding: 8px;
   background: none;
   color: $primary;
+
+  &--fixed{
+    position: fixed;
+    top: 24px;
+    right: 24px;
+  }
+
+  svg{
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
 }
 
-.toggleDarkMode--fixed {
-  position: fixed;
-  top: 24px;
-  right: 24px;
-}
+// BEM 방법론
+.Block{
+  content: "Block";
 
-.toggleDarkMode svg {
-  pointer-events: none;
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  &__Element{
+    content: "Block__Element";
+  }
 }

@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-/* Error: Can't find stylesheet to import.
- *    ,
- * 52 |   @import "./element/heaeder.scss";
- *    |           ^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass\app.scss 52:11  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 52 \2502    @import \"./element/heaeder.scss\";\d\a    \2502            ^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\app.scss 52:11  root stylesheet";
-}
-=======
-.dark {
-  --forground: var(--pink-50);
-  --background: var(--pink-900);
-  --primary: var(--pink-300);
-  --secondary: var(--gray-300);
-  --border: var(--pink-600);
+body {
+  margin: 0;
+  font: 1rem/1.5 "Spoqa Han Sans Neo", sans-serif;
+  background: #fff;
+  color: hsl(330deg, 10%, 30%);
 }
 
 .reset--list {
@@ -51,42 +31,30 @@ body::before {
   white-space: nowrap;
 }
 
-body {
-  margin: 0;
-  font: 1rem/1.5 "Spoqa Han Sans Neo", sans-serif;
-  background: #fff;
-  color: hsl(330deg, 10%, 30%);
+.toggleDarkMode {
+  cursor: pointer;
+  border: 0;
+  padding: 8px;
+  background: none;
+  color: hsl(330deg, 50%, 50%);
+}
+.toggleDarkMode--fixed {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+}
+.toggleDarkMode svg {
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
-.header {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.Block {
+  content: "Block";
 }
-
-.header--sticky {
-  position: sticky;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-bottom: 20px;
-  border-bottom: 1px solid hsl(330deg, 50%, 80%);
-  backdrop-filter: blur(2px);
-}
-
-.footer {
-  display: block;
-  width: 100%;
-  margin-top: 40px;
-  border-top: 1px solid hsl(330deg, 50%, 80%);
-  padding-top: 8px;
-  padding-bottom: 32px;
-  text-align: center;
-}
-
-.copyright {
-  color: hsl(330deg, 10%, 30%);
+.Block__Element {
+  content: "Block__Element";
 }
 
 .container {
@@ -94,33 +62,18 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 .container--padding {
   padding: 0 16px;
 }
-
 .container--flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  display: block;
-  width: auto;
-  height: 48px;
-}
-
-.headline {
-  margin: 0;
-  font-weight: normal;
-  color: hsl(330deg, 50%, 50%);
-}
-
 .content {
   flex: 1;
 }
-
 .content p {
   margin-top: 4px;
 }
@@ -165,26 +118,55 @@ body {
     --columns: 4;
   }
 }
-.toggleDarkMode {
-  cursor: pointer;
-  border: 0;
-  padding: 8px;
-  background: none;
+.headline {
+  margin: 0;
+  font-weight: normal;
   color: hsl(330deg, 50%, 50%);
 }
 
-.toggleDarkMode--fixed {
-  position: fixed;
-  top: 24px;
-  right: 24px;
+.logo {
+  display: block;
+  width: auto;
+  height: 48px;
 }
 
-.toggleDarkMode svg {
-  pointer-events: none;
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+.dark {
+  --forground: --pink-50;
+  --background: --pink-900;
+  --primary: --pink-300;
+  --secondary: --gray-300;
+  --border: --pink-600;
+}
+
+.header {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header--sticky {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(330deg, 50%, 80%);
+  backdrop-filter: blur(2px);
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 1px solid hsl(330deg, 50%, 80%);
+  padding-top: 8px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.copyright {
+  color: hsl(330deg, 10%, 30%);
 }
 
 /*# sourceMappingURL=app.css.map */
->>>>>>> 7d9a401fb773c42921284d66c461d9e2f25b1e0a
