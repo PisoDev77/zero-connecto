@@ -37,6 +37,7 @@
   
   @import "./component/dark";
   @import "./element/element";
+  @import "./variables";
 
   body {
     margin: 0;
@@ -49,7 +50,7 @@
   
   @import "./component/reset.scss";
   @import "./component/container.scss";
-  @import "./element/heaeder.scss";
+  @import "./element/header.scss";
   @import "./element/footer.scss";
  
   @import "./layout.scss";

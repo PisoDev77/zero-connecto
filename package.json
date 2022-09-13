@@ -5,6 +5,8 @@
     "serve": "live-server public --host=localhost --port=3000 --no-browser",
     "compile": "sass sass:public/assets/styles",
     "watch": "npm run compile -- --update --watch",
+    "optimize": "npm run compile -- --style compressed --no-source-map",
+    "build": "run-s clear optimize",
     "clear": "rimraf -rf public/assets/styles"
   },
   "devDependencies": {
