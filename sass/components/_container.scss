@@ -1,0 +1,15 @@
+.container {
+  box-sizing: border-box;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.container--padding {
+  padding: 0 16px;
+}
+
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

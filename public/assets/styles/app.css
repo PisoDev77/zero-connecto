@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Error: Can't find stylesheet to import.
  *    ,
  * 52 |   @import "./element/heaeder.scss";
@@ -15,3 +16,175 @@ body::before {
   border-bottom: 2px solid black;
   content: "Error: Can't find stylesheet to import.\a    \2577 \a 52 \2502    @import \"./element/heaeder.scss\";\d\a    \2502            ^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\app.scss 52:11  root stylesheet";
 }
+=======
+.dark {
+  --forground: var(--pink-50);
+  --background: var(--pink-900);
+  --primary: var(--pink-300);
+  --secondary: var(--gray-300);
+  --border: var(--pink-600);
+}
+
+.reset--list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.reset--abbr {
+  cursor: help;
+  text-decoration: none;
+}
+.reset--table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.reset--table caption {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.5 "Spoqa Han Sans Neo", sans-serif;
+  background: #fff;
+  color: hsl(330deg, 10%, 30%);
+}
+
+.header {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header--sticky {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(330deg, 50%, 80%);
+  backdrop-filter: blur(2px);
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 1px solid hsl(330deg, 50%, 80%);
+  padding-top: 8px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.copyright {
+  color: hsl(330deg, 10%, 30%);
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container--padding {
+  padding: 0 16px;
+}
+
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 48px;
+}
+
+.headline {
+  margin: 0;
+  font-weight: normal;
+  color: hsl(330deg, 50%, 50%);
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  margin-top: 4px;
+}
+
+.features {
+  display: flex;
+  flex-flow: column;
+  margin-top: 40px;
+  font-size: 0.875rem;
+  gap: 24px;
+}
+
+.features strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  color: hsl(330deg, 50%, 50%);
+}
+
+.features a {
+  text-decoration: none;
+  color: hsl(330deg, 50%, 50%);
+}
+
+@media (min-width: 48em) {
+  .features {
+    flex-flow: row wrap;
+  }
+  .features li {
+    --columns: 2;
+    /* flex-basis: calc(100% / 2 - (var(--gap) / (2 / (2 - 1))); */
+    flex-basis: calc(100% / var(--columns) - 24px / (var(--columns) / (var(--columns) - 1)));
+  }
+}
+@media (min-width: 64em) {
+  .features li {
+    --columns: 3;
+  }
+}
+@media (min-width: 80em) {
+  .features li {
+    --columns: 4;
+  }
+}
+.toggleDarkMode {
+  cursor: pointer;
+  border: 0;
+  padding: 8px;
+  background: none;
+  color: hsl(330deg, 50%, 50%);
+}
+
+.toggleDarkMode--fixed {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+}
+
+.toggleDarkMode svg {
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/*# sourceMappingURL=app.css.map */
+>>>>>>> 7d9a401fb773c42921284d66c461d9e2f25b1e0a

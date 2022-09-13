@@ -1,0 +1,43 @@
+// CSS @ 규칙
+// @charset
+// @import
+// @media
+// @supports
+
+// Sass @ 규칙
+// @debug
+
+$black: #000;
+$white: #fff;
+
+$pink-50: hsl(330, 50%, 95%);
+$pink-100: hsl(330, 50%, 90%);
+$pink-200: hsl(330, 50%, 80%);
+$pink-300: hsl(330, 50%, 70%);
+$pink-400: hsl(330, 50%, 60%);
+$pink-500: hsl(330, 50%, 50%);
+$pink-600: hsl(330, 50%, 40%);
+$pink-700: hsl(330, 50%, 30%);
+$pink-800: hsl(330, 50%, 20%);
+$pink-900: hsl(330, 50%, 10%);
+
+$gray-50: hsl(330, 10%, 95%);
+$gray-100: hsl(330, 10%, 90%);
+$gray-200: hsl(330, 10%, 80%);
+$gray-300: hsl(330, 10%, 70%);
+$gray-400: hsl(330, 10%, 60%);
+$gray-500: hsl(330, 10%, 50%);
+$gray-600: hsl(330, 10%, 40%);
+$gray-700: hsl(330, 10%, 30%);
+$gray-800: hsl(330, 10%, 20%);
+$gray-900: hsl(330, 10%, 10%);
+
+$forground: $black;
+$background: $white;
+$primary: $pink-500;
+$secondary: $gray-700;
+$border: $pink-200;
+
+$gap: 24px;
+
+$max-width: 1280px;
