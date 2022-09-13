@@ -1,0 +1,14 @@
+@use '../base' as *;
+
+.navigation {
+  &--list {
+    // ul, ol 초기화
+    @extend .reset--list;
+  }
+  &--item {
+  }
+  &--link {
+    // a 초기화
+    @extend .reset--anchor;
+  }
+}
