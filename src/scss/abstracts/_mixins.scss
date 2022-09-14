@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+@mixin font(
+  $size: $base-font-size,
+  $leading: $base-leading,
+  $family: $font-family
+) {
+  font: #{$size}/#{$leading} $family;
+}
+
+@mixin colors($forground: null, $background: null) {
+  background: $background;
+  color: $forground;
+}
+
+@mixin size($width, $height: $width, $min-or-max: '') {
+  @if $min-or-max != '' {
+    $min-or-max: if($min-or-max == min, 'min-', 'max-');
+  }
+  #{$min-or-max}width: $width;
+  #{$min-or-max}height: $height;
+}

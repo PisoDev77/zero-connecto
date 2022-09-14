@@ -1,0 +1,24 @@
+@use 'abstracts' as * with (
+  $base-rem-size: 16
+);
+@use 'base';
+@use 'sass:meta';
+
+@function demo() {
+  @return null;
+}
+
+@debug is-null(null);
+@debug is-string('design is all. all is design');
+@debug is-color(rgb(233, 21, 2));
+@debug is-number(100px);
+@debug is-bool(not true);
+@debug is-list(100px 20px);
+@debug is-map(
+  (
+    width: 100px,
+    height: 20px,
+  )
+);
+
+// @debug is-function(demo);
