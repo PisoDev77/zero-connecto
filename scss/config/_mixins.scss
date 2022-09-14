@@ -1,0 +1,25 @@
+@use "./theme" as *;
+@mixin getColor($contrast: 500) {
+    @debug $contrast;
+}
+
+@mixin font($size: $base-font-size, $leading: $base-leading, $family: $font-family){
+    font: #{$size} / #{$leading} $family;
+}
+
+@mixin colors($fg: null, $bg: null){
+    background-color: $bg;
+    color: $fg;
+}
+
+@mixin size($width, $height:$width, $max:null){
+    @if $max != null {
+        $max: #{$max}-;
+        // $max: if($max == min, min, max);
+    }
+    @debug #{$max}width;
+    #{$max}width: $width;
+    #{$max}height: $height;
+}
+
+

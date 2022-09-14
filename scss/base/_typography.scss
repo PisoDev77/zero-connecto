@@ -1,0 +1,13 @@
+@use "../config/" as * ;
+:root{
+    font-size: $base-rem-percentage;
+}
+
+body {
+    // font: #{$base-font-size}/#{$base-leading} $font-family;
+    @include font($base-font-size, $base-leading, $font-family);
+    // background: $white;
+    // color: $black;
+    @include colors(rgba($white, 50%),rgba($black, 20%));
+    @include size(100px, 200px)
+}

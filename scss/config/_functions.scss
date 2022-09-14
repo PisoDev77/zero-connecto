@@ -1,0 +1,43 @@
+
+@use "sass:math";
+@use "sass:map";
+@use "sass:meta";
+
+@function get-base-rem-size($base-px-size){
+    
+    @return math.div(remove-unit($base-px-size), 16) * 100%;
+}
+
+@function rem($unit, $base: 16){
+    @return math.div(remove-unit($unit), remove-unit($base)) * 1rem;
+}
+
+
+@function em($unit, $base: 16){
+    @return math.div(remove-unit($unit), remove-unit($base)) * 1em;
+}
+
+
+@function remove-unit($unit){
+    @return math.div($unit, $unit * 0 + 1);
+}
+
+@function get-color($name, $level){
+    @return map.get($name, $level);
+};
+
+    
+    // @debug get-red(300);
+    // @function get-gray(){
+    //     @return ;
+    // };
+    // @function get-blue(){
+    //     @return ;
+    // };
+    // @function get-green(){
+    //     @return 
+    // };
+
+@function is-function($name){
+    @return meta.type-of(meta.get-function($name));
+}

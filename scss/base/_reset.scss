@@ -1,0 +1,18 @@
+%reset-box-model{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+%reset-pesudo-element{
+    &::after,&::before{
+        @extend %reset-box-model;
+    }
+}
+body {
+    @extend %reset-pesudo-model !optional;
+    *{
+        @extend %reset-box-model;
+        @extend %reset-pesudo-model !optional;
+    }
+}
