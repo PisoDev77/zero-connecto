@@ -1,60 +1,6 @@
 @use "../variables" as *;
-@use "../functions/types" as *;
-@use "sass:map";
 
 @mixin colors($forground: null, $background: null) {
     background: $background;
     color: $forground;
 }
-
-@mixin make-color-utils-try($name) {
-    $color-values: map.get($colors, $name);
-    
-    
-    $name: #{$name};
-    
-    $type: is-map($color-values); 
-    
-    @if $type {
-      //map 일 때
-      @each $key, $value in $color-values {
-        .bg-#{$name}-#{$key}{
-          background-color: #{$value}; 
-        }
-        .fg-#{$name}-#{$key}{
-          color: #{$value}; 
-        }
-      }
-    } @else {
-      //color 일 때
-      .bg-#{$name}{
-        background-color: #{$color-values}; 
-      }
-      .fg-#{$name}{
-        color: #{$color-values}; 
-      }
-    }
-    
-  }
-  
-  @mixin make-color-utils($name) {
-    $prefixes: 'text', 'bg';
-    $color-value: map.get($colors, $name);
-    $name: if(is-color($name), #{$name}, $name);
-
-    @each $prefix in $prefixes {
-      $prop: if($prefix == 'text', 'color', 'background-color');
-      @if is-color($color-value) {
-        .#{$prefix}-#{$name} {
-            #{$prop}: $color-value;
-        }
-      } @else if is-map($color-value) {
-          @each $variant, $value in $color-value {
-            .#{$prefix}-#{$name}-#{$variant} {
-              #{$prop}: $value;
-            }
-          }
-        }
-      }
-    
-  }
