@@ -1,0 +1,10 @@
+@use "../variables" as *;
+
+@mixin size($width, $height: $width, $min-or-max: '') {
+    @if $min-or-max != '' {
+      $min-or-max: if($min-or-max == min, 'min-', 'max-');
+    }
+    #{$min-or-max}width: $width;
+    #{$min-or-max}height: $height;
+  }
+  

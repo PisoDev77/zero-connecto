@@ -7,6 +7,11 @@
 // $i: 10;
 // $step: 2;
 
+// @while 조건이 참인 동안
+// @for 시작, 종료 사이 순환
+// @each list, map 자료형 처리
+// if($condition, $if true, $if false)
+
 // @while $i >= 0 {
 //   @debug $i;
 //   $i: $i - $step;
@@ -24,16 +29,13 @@
 
 // @debug $colors;
 
-@mixin makeColorUtils($name, $prop: color) {
-  $color-values: map.get($colors, $name);
-  @each $key, $value in $color-values {
-    .#{$name}-#{$key} {
-      #{$prop}: $value;
-    }
-  }
+@each $key, $value in $colors{
+  @include make-color-utils($key);
 }
 
-@include makeColorUtils(red);
-@include makeColorUtils(green, background);
-@include makeColorUtils(blue);
-@include makeColorUtils(gray);
+
+
+// @include make-color-utils(red);
+// @include make-color-utils(green);
+// @include make-color-utils(blue);
+// @include make-color-utils(gray);

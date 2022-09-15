@@ -1,0 +1,28 @@
+@use "sass:math";
+// --------------------------------------------------------------------------
+// Units
+
+@function get-base-rem-size-percentage($base-px-size) {
+    @return math.div(remove-unit($base-px-size), 16) * 100%;
+  }
+  
+  @function rem($unit, $base: 16) {
+    @return math.div(remove-unit($unit), remove-unit($base)) * 1rem;
+  }
+  
+  @function em($unit, $base: 16) {
+    @return math.div(remove-unit($unit), remove-unit($base)) * 1em;
+  }
+  
+  @function get-unit($value) {
+    @return math.unit($value);
+  }
+  
+  @function has-unit($value) {
+    @return get-unit($value) != '';
+  }
+  
+  @function remove-unit($unit) {
+    @return math.div($unit, $unit * 0 + 1);
+  }
+  

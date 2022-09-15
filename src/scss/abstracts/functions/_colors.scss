@@ -1,0 +1,20 @@
+@use "sass:map";
+// --------------------------------------------------------------------------
+// Colors
+
+@function get-color($map, $level) {
+    @return map.get($map, $level);
+  }
+  
+  @function get-red($level) {
+    @return get-color($red, $level);
+  }
+  @function get-gray($level) {
+    @return get-color($gray, $level);
+  }
+  @function get-blue($level) {
+    @return get-color($blue, $level);
+  }
+  @function get-green($level) {
+    @return get-color($green, $level);
+  }

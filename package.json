@@ -1,9 +1,5 @@
 {
   "private": true,
-<<<<<<< HEAD
-  "scripts": {
-    "serve": "npx live-server public --host=localhost --port=3000 --no-browser"
-=======
   "name": "cross-direction-carousel-with-sass",
   "version": "0.0.1",
   "description": "Sass 미니 프로젝트",
@@ -19,6 +15,5 @@
     "npm-run-all": "4.1.5",
     "rimraf": "3.0.2",
     "sass": "1.54.9"
->>>>>>> 5b6e26f5aa7e550b96e65793c4e3905d416755f0
   }
 }

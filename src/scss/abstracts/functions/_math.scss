@@ -1,0 +1,13 @@
+@use "sass:math";
+
+// --------------------------------------------------------------------------
+// Math
+
+@function get-random($n) {
+    @return math.round(math.random() * remove-unit($n));
+  }
+  
+  @function get-random-min-max($min: 0, $max: 100) {
+    @return get-random($max - $min) + $min;
+  }
+  
