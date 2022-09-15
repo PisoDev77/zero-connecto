@@ -1,0 +1,61 @@
+@use "../abstracts/functions/units" as *;
+
+
+@mixin spacing($val, $base: 4) {
+    $unit: if(get-unit($val) != "",get-unit($val),"px");
+    $val: remove-unit($val);
+    @debug $unit ;
+  
+    $res: $val * $base;
+
+    margin: #{$res}#{$unit};
+    
+}
+@mixin p($val){
+    $unit: if(get-unit($val) == "", #{$val}px, #{$val});
+    padding: #{$unit};
+}
+@mixin px($val){
+    $unit: if(get-unit($val) == "", #{$val}px, #{$val});
+    padding-left: #{$unit};
+    padding-right: #{$unit};
+}
+@mixin py($val){
+    $unit: if(get-unit($val) == "", #{$val}px, #{$val});
+    padding-top: #{$unit};
+    padding-bottom: #{$unit};
+}
+
+@mixin position($pos,$list:null){
+    position: $pos;
+    $compare: null;
+    @each $item in $list{
+        
+        @if $compare == t{
+            top: $item;
+        }
+
+        @if $compare == r{
+            right: $item;
+        }
+
+        @if $compare == z{
+            z-index: $item;
+        }
+
+        $compare: $item;
+    }
+}
+.test{
+
+    // @include spacing(6);
+    // @include spacing(12%);
+    // @include spacing(12cm);
+
+    // @include p(6);
+    // @include px(12);
+    // @include py(30px);
+
+    @include position(absolute, t 24px r 24px z 1000);
+    @include position(sticky, t 24px);
+}

@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-@use "sass:meta";
-// --------------------------------------------------------------------------
-// Types
-@function is-type($data) {
-    @return meta.type-of($data);
-  }
-  
-  @function is-null($data) {
-    @return is-type($data) == 'null';
-  }
-  
-  @function is-string($data) {
-    @return is-type($data) == 'string';
-  }
-  
-  @function is-color($data) {
-    @return is-type($data) == 'color';
-  }
-  
-  @function is-number($data) {
-    @return is-type($data) == 'number';
-  }
-  
-  @function is-bool($data) {
-    @return is-type($data) == 'bool';
-  }
-  
-  @function is-list($data) {
-    @return is-type($data) == 'list';
-  }
-  
-  @function is-map($data) {
-    @return is-type($data) == 'map';
-  }
-  
-  @function is-function($get-function-value) {
-    @return is-type($get-function-value) == 'function';
-  }
-=======
 @use 'sass:meta';
 
 @function is-type($data) {
@@ -75,4 +35,3 @@
 @function is-function($get-function-value) {
   @return is-type($get-function-value) == 'function';
 }
->>>>>>> ef951cf7470043a935c1e11e28a4e520170fdf69
