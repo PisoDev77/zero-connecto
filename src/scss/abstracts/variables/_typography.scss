@@ -1,0 +1,8 @@
+@use '../functions' as *;
+
+$font-family: 'Open Sans', Dotum, Arial, Verdana, sans-serif;
+
+$base-rem-size: 10 !default;
+$base-rem-percentage: get-base-rem-size-percentage($base-rem-size);
+$base-font-size: rem(16, $base-rem-size);
+$base-leading: 1.5;

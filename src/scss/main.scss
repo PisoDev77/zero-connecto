@@ -1,0 +1,39 @@
+@use 'abstracts' as * with (
+  $base-rem-size: 16
+);
+@use 'base';
+@use 'sass:map';
+
+// $i: 10;
+// $step: 2;
+
+// @while $i >= 0 {
+//   @debug $i;
+//   $i: $i - $step;
+// }
+
+// @for $i from 1 through 10 {
+//   @debug $i;
+// }
+
+// .red-100 { color: #ff0000; }
+// .
+// .
+// .
+// .red-900 { color: #330000; }
+
+// @debug $colors;
+
+@mixin makeColorUtils($name, $prop: color) {
+  $color-values: map.get($colors, $name);
+  @each $key, $value in $color-values {
+    .#{$name}-#{$key} {
+      #{$prop}: $value;
+    }
+  }
+}
+
+@include makeColorUtils(red);
+@include makeColorUtils(green, background);
+@include makeColorUtils(blue);
+@include makeColorUtils(gray);

@@ -1,0 +1,162 @@
+body *::before, body *::after, body, body::before, body::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  font: 1rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+.red-100 {
+  color: #ead5d8;
+}
+
+.red-200 {
+  color: #d5abb0;
+}
+
+.red-300 {
+  color: #c08189;
+}
+
+.red-400 {
+  color: #ab5762;
+}
+
+.red-500 {
+  color: #962d3b;
+}
+
+.red-600 {
+  color: #78242f;
+}
+
+.red-700 {
+  color: #5a1b23;
+}
+
+.red-800 {
+  color: #3c1217;
+}
+
+.red-900 {
+  color: #1e090c;
+}
+
+.green-100 {
+  background: #d0d9d6;
+}
+
+.green-200 {
+  background: #a1b2ae;
+}
+
+.green-300 {
+  background: #728c85;
+}
+
+.green-400 {
+  background: #43655d;
+}
+
+.green-500 {
+  background: #143f34;
+}
+
+.green-600 {
+  background: #10322a;
+}
+
+.green-700 {
+  background: #0c261f;
+}
+
+.green-800 {
+  background: #081915;
+}
+
+.green-900 {
+  background: #040d0a;
+}
+
+.blue-100 {
+  color: #deecef;
+}
+
+.blue-200 {
+  color: #bed9df;
+}
+
+.blue-300 {
+  color: #9dc6cf;
+}
+
+.blue-400 {
+  color: #7db3bf;
+}
+
+.blue-500 {
+  color: #5ca0af;
+}
+
+.blue-600 {
+  color: #4a808c;
+}
+
+.blue-700 {
+  color: #376069;
+}
+
+.blue-800 {
+  color: #254046;
+}
+
+.blue-900 {
+  color: #122023;
+}
+
+.gray-100 {
+  color: #d4d3d4;
+}
+
+.gray-200 {
+  color: #a9a8a9;
+}
+
+.gray-300 {
+  color: #7d7c7e;
+}
+
+.gray-400 {
+  color: #525153;
+}
+
+.gray-500 {
+  color: #272528;
+}
+
+.gray-600 {
+  color: #1f1e20;
+}
+
+.gray-700 {
+  color: #171618;
+}
+
+.gray-800 {
+  color: #100f10;
+}
+
+.gray-900 {
+  color: #080708;
+}
+
+/*# sourceMappingURL=main.css.map */

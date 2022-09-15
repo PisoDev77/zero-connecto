@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+:root {
+  font-size: $base-rem-percentage;
+}
+
+body {
+  @include font();
+  @include colors($white, $black);
+}
