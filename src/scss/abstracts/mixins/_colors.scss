@@ -1,6 +1,29 @@
-@use "../variables" as *;
+@use 'sass:map';
+@use '../variables' as *;
+@use '../functions' as *;
 
 @mixin colors($forground: null, $background: null) {
-    background: $background;
-    color: $forground;
+  background: $background;
+  color: $forground;
+}
+
+@mixin make-color-util($name) {
+  $prefixes: 'text', 'bg';
+  $color-value: map.get($colors, $name);
+  $name: if(is-color($name), #{$name}, $name);
+
+  @each $prefix in $prefixes {
+    $prop: if($prefix == 'text', 'color', 'background-color');
+    @if is-color($color-value) {
+      .#{$prefix}-#{$name} {
+        #{$prop}: $color-value;
+      }
+    } @else if is-map($color-value) {
+      @each $variant, $value in $color-value {
+        .#{$prefix}-#{$name}-#{$variant} {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
 }

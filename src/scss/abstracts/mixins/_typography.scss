@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+@mixin font(
+  $size: $base-font-size,
+  $leading: $base-leading,
+  $family: $font-family
+) {
+  font: #{$size}/#{$leading} $family;
+}
