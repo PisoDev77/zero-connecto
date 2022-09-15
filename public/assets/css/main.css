@@ -324,8 +324,7 @@ body {
   top: 24px;
   right: 24px;
   z-index: 1000;
-  position: sticky;
-  top: 24px;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

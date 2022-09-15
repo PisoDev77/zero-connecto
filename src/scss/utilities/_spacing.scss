@@ -46,6 +46,18 @@
         $compare: $item;
     }
 }
+@mixin relative($list:null){
+    @include position(relative, $list);
+}
+@mixin sticky($list:null){
+    @include position(sticky, $list);
+}
+@mixin absolute($list:null){
+    @include position(absolute, $list);
+}
+@mixin fixed($list:null){
+    @include position(fixed, $list);
+}
 .test{
 
     // @include spacing(6);
@@ -57,5 +69,5 @@
     // @include py(30px);
 
     @include position(absolute, t 24px r 24px z 1000);
-    @include position(sticky, t 24px);
+    @include relative;
 }
