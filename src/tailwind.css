@@ -7,7 +7,17 @@
 
 @layer components{
     .Button{
-        @apply cursor-pointer py-2 px-6 text-sm;
+        @apply cursor-pointer py-2 px-6 text-lg bg-ssh-green-600 rounded;
+        @apply hover:bg-ssh-green-400 focus:border-4 border-ssh-green-800 active:bg-black
+    }
+    .Card{
+        /* mobile fst */
+        @apply bg-white p-10 rounded-lg shadow-2xl w-full;
+        /* lg */
+        @apply lg:inline-flex lg:w-auto
+    }
+    .Circle{
+        @apply w-11 h-11 rounded-full;
     }
 }
 

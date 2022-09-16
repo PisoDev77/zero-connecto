@@ -44,15 +44,38 @@
 
   </head>
 
-  <body class="h-screen bg-ssh-green-400 text-white flex justify-center items-center">
+  <body class="h-screen relative bg-ssh-green-100 text-white flex justify-center items-center
+    dark:bg-black
+  ">
+
+    <div class="flex items-center gap-5">
+      <div class="Circle bg-orange-300"></div>
+      <div class="Circle bg-red-600"></div>
+      <div class="Circle bg-amber-400"></div>
+    </div>
+
+    <button id="darkmode" class="Button fixed top-5 right-5" aria-label="다크 모드로 전환" title="다크모드로 전환">다크 모드</button>
+
+    <script>
+      const body = document.querySelector("html");
+
+      darkmode.addEventListener("click",()=>{
+        const bool = body.classList.contains("dark");
+        if(bool){
+          body.classList.remove("dark");
+        }else{
+          body.classList.add("dark");
+        }
+      });
+    </script>
     
-    <figure class="bg-white p-10 rounded-lg">
+    <!-- <figure class="Card">
       <img class="inline-block" src="./assets/images/tailwindcss-logotype.svg" alt="" />
-      <figcaption class="flex flex-col">
+      <figcaption class="flex flex-col whitespace-nowrap overflow-hidden">
         <h3 lang="en" class="text-ssh-green-800">Tailwind <abbr title="Cascading Style Sheet">CSS</abbr></h3>
         <p class="text-ssh-green-700">다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할 수 있습니다.</p>
         <a 
-          class="text-ssh-green-900"
+          class="text-ssh-green-900 hover:text-red-700 transition duration-300 focus:outline-none focus:ring-2"
           href="https://tailwindcss.com/docs/utility-first"
           rel="noopener noreferrer"
           target="_blank"
@@ -60,7 +83,7 @@
           유틸리티 퍼스트 펀더멘탈
         </a>
       </figcaption>
-    </figure>
+    </figure> -->
 
     <!-- <h1 class="text-4xl font-bold "><abbr title="Heading 1">HH</abbr></h1>
     <h2 class="text-xl font-semibold">Heading 2</h2>

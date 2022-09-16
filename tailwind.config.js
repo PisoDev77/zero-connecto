@@ -1,7 +1,21 @@
+
 /** @type {import('tailwindcss').Config} */
+
+// import defaultModule from 'module'
+const { em } = require('./src/utils/unit');
+
+
 module.exports = {
+  darkMode: 'class',
   content: ["public/index.html"],
   theme: {
+    screens:{
+      sm: em(500),
+      md: em(700),
+      lg: em(900),
+      xl: em(1100),
+      '2xl': em(1300)
+    },
     extend: {
       colors:{
         "ssh-green": {
