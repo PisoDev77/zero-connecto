@@ -40,68 +40,39 @@
       rel="stylesheet"
       href="//gif.helltabus.com/libs/spoqa-han-sans-neo/css/SpoqaHanSansNeo-kr.css" />
       
-    <style type="text/tailwindcss">
+      <link rel="stylesheet" href="assets/styles/main.css" />
 
-      @layer components {
-        .Button{
-          @apply w-24 h-8 flex text-white px-8 py-1 text-sm rounded;
-        }
-      }
-      @layer utilities{
-        .my-underline{
-          padding-bottom: 0.2em;
-          border-bottom: 2px solid currentColor;
-        }
-      }
-      
-    </style>
-      <!-- <link rel="stylesheet" href="assets/styles/app.css" /> -->
-      <script src="//cdn.tailwindcss.com"></script>
-      <script>
-        tailwind.config = {
-          theme:{
-            extend:{
-              colors:{
-                "ssh-green": {
-                    "100": "#d3e1d1",
-                    "200": "#a7c3a3",
-                    "300": "#7ca575",
-                    "400": "#508747",
-                    "500": "#246919",
-                    "600": "#1d5414",
-                    "700": "#163f0f",
-                    "800": "#0e2a0a",
-                    "900": "#071505"
-                  },
-              }
-            }
-          }
-        };
-      </script>
   </head>
 
-  <body>
+  <body class="h-screen bg-ssh-green-400 text-white flex justify-center items-center">
+    
+    <figure class="bg-white p-10 rounded-lg">
+      <img class="inline-block" src="./assets/images/tailwindcss-logotype.svg" alt="" />
+      <figcaption class="flex flex-col">
+        <h3 lang="en" class="text-ssh-green-800">Tailwind <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+        <p class="text-ssh-green-700">다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할 수 있습니다.</p>
+        <a 
+          class="text-ssh-green-900"
+          href="https://tailwindcss.com/docs/utility-first"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          유틸리티 퍼스트 펀더멘탈
+        </a>
+      </figcaption>
+    </figure>
 
+    <!-- <h1 class="text-4xl font-bold "><abbr title="Heading 1">HH</abbr></h1>
+    <h2 class="text-xl font-semibold">Heading 2</h2>
+    <h3 class="text-lg font-medium">Heading 3</h3>
 
-    <div class="flex gap-2 p-10">
-      <button class="Button bg-ssh-green-600">
-        저장
-      </button>
-      <button class="Button bg-ssh-green-300">
-        취소
-      </button>
-    </div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
 
-    <div class="app">
-      <header hidden lang="en">
-        <h1 class="logo">
-          <a class="my-underline" href="//tailwindcss.com" target="_blank" rel="noopener noreferer">
-            <img class="mark h-8" src="assets/images/tailwindcss-mark.svg" alt="" height="24" />
-            Tailwind <abbr title="Cascading Style Sheet">CSS</abbr>
-          </a>
-        </h1>
-      </header>
-    </div>
+    <button class="Button" type="button">저장</button> -->
   </body>
 
 </html>
