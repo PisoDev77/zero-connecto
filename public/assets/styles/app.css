@@ -1,0 +1,25 @@
+@import url('./partials/variable.css');
+@import url('./partials/base.css');
+@import url('./partials/typography.css');
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app .logo {
+  padding: 0.8em;
+}
+
+.app .external-link {
+  color: var(--tailwind);
+  text-decoration: none;
+}
+
+.app .mark {
+  height: 32px;
+  margin-right: 8px;
+  vertical-align: middle;
+}

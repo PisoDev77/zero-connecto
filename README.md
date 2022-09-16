@@ -1,3 +1,3 @@
-# Sass 프리프로세서
+# Tailwind CSS
 
-UI 디자인 파일 다운로드: [TaskList (figma)](https://www.figma.com/file/qbQoxOz0eOlJIFTxgHlSUL/Task-List/duplicate)
+유틸리티 퍼스트 CSS 프레임워크를 사용하면 HTML 마크업에서 모든 디자인을 직접 빌드하도록 구성할 수 있습니다.

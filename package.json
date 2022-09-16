@@ -1,6 +1,8 @@
 {
-  "private": true,
   "scripts": {
-    "serve": "npx live-server public --host=localhost --port=3000 --no-browser"
+    "serve": "live-server public --host=localhost --port=8080 --no-browser"
+  },
+  "devDependencies": {
+    "live-server": "1.2.2"
   }
 }

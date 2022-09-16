@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: none;
+}

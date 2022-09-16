@@ -1,0 +1,7 @@
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font: 1.6rem/1.5 'Spoqa Han Sans Neo', Pretendard, Arial, sans-serif;
+}
