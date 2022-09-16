@@ -39,17 +39,112 @@
     <link
       rel="stylesheet"
       href="//gif.helltabus.com/libs/spoqa-han-sans-neo/css/SpoqaHanSansNeo-kr.css" />
-    <link rel="stylesheet" href="assets/styles/app.css" />
+      
+      <!--  -->
+      <style type="text/tailwindcss">
+        @layer base{
+          [hidden]{
+            display: none !important;
+          }
+        }
+      </style>
+
+      <!-- <link rel="stylesheet" href="assets/styles/app.css" /> -->
+      <script src="//cdn.tailwindcss.com"></script>
+
+
+      <!-- Tailwind CSS 구성(configuration) 확장(theme extend) -->
+      <script>
+        tailwind.config = {
+          theme: {
+            extend:{
+              spacing:{
+                13: '13px',
+              },
+              colors: {
+      
+                  "yamoo9-indigo": {
+                    "100": "#dbd1f7",
+                    "200": "#b7a3ef",
+                    "300": "#9375e7",
+                    "400": "#6e47df",
+                    "500": "#4a19d7",
+                    "600": "#3b14ac",
+                    "700": "#2d0f81",
+                    "800": "#1e0a56",
+                    "900": "#0f052b"
+                  },
+                  "jongmin-green": {
+                    "100": "#cfece7",
+                    "200": "#9fd9cf",
+                    "300": "#70c6b7",
+                    "400": "#40b39f",
+                    "500": "#10a086",
+                    "600": "#0d806c",
+                    "700": "#0a6051",
+                    "800": "#064036",
+                    "900": "#03201b"
+                  },
+                  "ssh-green": {
+                    "100": "#d3e1d1",
+                    "200": "#a7c3a3",
+                    "300": "#7ca575",
+                    "400": "#508747",
+                    "500": "#246919",
+                    "600": "#1d5414",
+                    "700": "#163f0f",
+                    "800": "#0e2a0a",
+                    "900": "#071505"
+                  },
+                  "rong-violet": {
+                    "100": "#ede2fa",
+                    "200": "#dac5f6",
+                    "300": "#c8a8f1",
+                    "400": "#b68bec",
+                    "500": "#a36de8",
+                    "600": "#8358b9",
+                    "700": "#62428b",
+                    "800": "#412c5d",
+                    "900": "#21162e"
+                  },
+                  "psu-green": {
+                    "100": "#def4d1",
+                    "200": "#bee9a3",
+                    "300": "#9dde75",
+                    "400": "#7dd348",
+                    "500": "#5cc81a",
+                    "600": "#4aa015",
+                    "700": "#37780f",
+                    "800": "#25500a",
+                    "900": "#122805"
+                  }
+                }
+            }
+          }
+        }
+      </script>
   </head>
 
   <body>
 
-    <div class="app">
+
+    <div class="flex items-center gap-2 m-4">
+      <div class="w-10 h-10 bg-ssh-green-500"></div>
+      <div class="w-10 h-10 bg-ssh-green-300"></div>
+    </div>
+
+
+    <div class="flex items-center gap-13 m-4">
+      <div class="w-10 h-10 bg-ssh-green-800"></div>
+      <div class="w-10 h-10 bg-ssh-green-100"></div>
+    </div>
+
+    <div hidden class="h-screen flex justify-center items-center">
       <header lang="en">
-        <h1 class="logo">
+        <h1 class="text-5xl text-ssh-green-500 font-bold">
           <a class="external-link" href="//tailwindcss.com" target="_blank" rel="noopener noreferer">
-            <img class="mark" src="assets/images/tailwindcss-mark.svg" alt="" height="24" />
-            Tailwind <abbr title="Cascading Style Sheet">CSS</abbr>
+            <img class="inline-block align-middle h-9" src="assets/images/tailwindcss-mark.svg" alt="" height="24" />
+            Tailwind <abbr class="no-underline cursor-help" title="Cascading Style Sheet">CSS</abbr>
           </a>
         </h1>
       </header>
